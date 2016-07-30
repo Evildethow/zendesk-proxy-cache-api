@@ -1,0 +1,5 @@
+CREATE TABLE "tickets" (
+  "id"      BIGINT PRIMARY KEY,
+  "org_id" BIGINT NOT NULL
+);
+ALTER TABLE "tickets" ADD CONSTRAINT ORG_FK FOREIGN KEY ("org_id") REFERENCES "organisations" ("id") ON UPDATE RESTRICT ON DELETE CASCADE;
